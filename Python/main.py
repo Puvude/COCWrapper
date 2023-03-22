@@ -30,18 +30,14 @@ if __name__ == '__main__':
     if response.status_code == 200:
         # Class: Members
         class_members = Members(Main.URL, Main.HEADERS)
-        # print(class_members.get_clan_info())
 
         # New Project
         class_project = Project(Next.URL, Next.HEADERS)
-        print(class_project.get_players())
 
         # Class: Clan
         class_clan = Clan(Main.URL, Main.HEADERS)
-        # print(class_clan.format_role_name())
 
         # Class: Excel
         class_excel = Excel(Main.CLAN_TAG, Main.URL, Main.HEADERS)
-        # class_excel.create_clan_overview_excel_file()
     else:
         print("Error retrieving clan data.")
